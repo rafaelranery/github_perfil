@@ -1,0 +1,25 @@
+.searchBar {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.searchBarInput {
+    margin-left: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 4px;
+
+}
+
+.searchBtn {
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 6px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: green;
+    color: #eee;
+}

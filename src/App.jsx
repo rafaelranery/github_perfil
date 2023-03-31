@@ -4,6 +4,8 @@ import Perfil from "./components/Perfil";
 /* para importas só com a página, nomeamos o component com index.jsx */
 import Formulario from "./components/Formulário";
 import ReposList from "./components/Repos";
+import SearchBar from "./components/SearchBar";
+
 
 function App() {
   // const nome = 'Rafael';
@@ -19,11 +21,19 @@ function App() {
   // let estaDeDia = true;
 
   const [formulatioEstaVisivel, setFormulatioEstaVisivel] = useState(true);
+
   const [nomeUsuario, setNomeUsuario] = useState('');
+
+  const childToParent = (nomeUsuarioSearch) => {
+    setNomeUsuario(nomeUsuarioSearch)
+  }
+  
 
   return (
     <>
-      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+      {/* <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} /> */}
+      <SearchBar childToParent={childToParent} />
+      
       {nomeUsuario.length > 4 && (
         <>
           <Perfil nomeUsuario={nomeUsuario} />
